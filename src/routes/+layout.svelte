@@ -2,6 +2,9 @@
   import '../app.css';
   import Navbar from '$lib/components/Navbar.svelte';
   import { page } from '$app/stores';
+  import favicon from '$lib/assets/favicon.svg';
+
+
 
   let botActive = false;
 
@@ -14,6 +17,10 @@
 
   $: meta = pageTitles[$page.url.pathname] ?? { title: 'PolyBot', sub: '' };
 </script>
+
+  <svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
 
 <div class="min-h-screen" style="background: var(--bg-base);">
   <Navbar {botActive} />

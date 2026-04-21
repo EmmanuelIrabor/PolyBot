@@ -47,7 +47,7 @@
 <svelte:head><title>Markets · PolyBot</title></svelte:head>
 
 <!-- Page header -->
-<div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+<div class="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mt-5">
   <!-- Stats strip — scrollable on mobile -->
   <div class="flex gap-2 overflow-x-auto pb-1 sm:pb-0 sm:order-2 flex-shrink-0">
     {#each [['Markets', markets.length], ['Trending', markets.filter(m => m.trending).length], ['Top Score', '84']] as [label, val]}
